@@ -5,7 +5,7 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: false
         },
-        size:{
+        length:{
             type: DataTypes.STRING,
             allowNull: false
         },
@@ -24,6 +24,10 @@ module.exports = (sequelize, DataTypes) => {
         storage_loc:{
             type: DataTypes.STRING,
         },
+        weight:{
+            type: DataTypes.FLOAT,
+            allowNull: false
+        }
 
     })
     return item;

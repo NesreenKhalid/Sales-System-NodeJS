@@ -8,13 +8,11 @@ router.get("/all", (req, res) => {
 
 router.post("/new", (req, res)=>{
     db.client.create({
-        first_name: req.body.first_name,
-        middle_name: req.body.middle_name,
-        last_name: req.body.last_name,
+        name: req.body.name,
         phone: req.body.phone,
         city: req.body.city,
         address: req.body.address,
         discount: req.body.discount
-    }).then(submittedClient => res.send(submittedClient));
+    }).then(submittedClient => res.send(submittedClient)).catch(err=>console.log(err));
 });
 module.exports = router;
