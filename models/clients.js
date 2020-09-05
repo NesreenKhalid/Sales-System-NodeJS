@@ -19,6 +19,10 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.DECIMAL,
             defaultValue: 0
         }
-    })
+    });
+
+    client.associate = models =>{
+        client.hasMany(models.bill);
+    }
 return client;
 }

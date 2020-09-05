@@ -29,6 +29,10 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false
         }
 
-    })
+    });
+
+    item.associate = models =>{
+        item.belongsToMany(models.bill, { through: models.bill_items });
+    };
     return item;
 }

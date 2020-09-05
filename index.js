@@ -1,5 +1,5 @@
 const express = require("express");
-const app = express();  //??
+const app = express();  
 const crud = require('express-sequelize-crud') ;
 
 const db = require("./models");
@@ -10,8 +10,8 @@ const itemRoutes = require("./routes/itemRoutes");
 var cors = require('cors')
 
 app.use(cors());
-app.use(express.urlencoded({ extended: true}));    //??
-app.use(express.json());    //??
+app.use(express.urlencoded({ extended: true}));    
+app.use(express.json());    
 
 app.use("/client", clientRoutes);
 
